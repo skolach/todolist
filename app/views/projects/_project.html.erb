@@ -1,12 +1,11 @@
-<div class="col-sm-3 single-post-card" id=<%= project_path(project.id) %>>
-  <div class="card">
-    <div class="card-block">
-      <h4 class="project-text">
-        <%= truncate(project.title, :length => 60) %>
-      </h4>
-      <div class="project-content">
-        <h3><%= project.title %></h3> 
-      </div>
-    </div>
-  </div><!-- card -->
-</div><!-- col-sm-3 -->
+<%= javascript_include_tag "project.js" %>
+<div id="container" id=<%= project_path(project.id) %>>
+  <h2><%= truncate(project.title, :length => 50) %> <i class="fa fa-plus"></i> </h2> <input type="text" placeholder="Add New Task">
+  <ul>
+
+    <% project.tasks.each do |task| %>
+      <li><span><i class="fa fa-trash"></i></span> <%=task.title%> </li>      
+    <% end %>
+
+  </ul>
+</div>
