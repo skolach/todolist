@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def index
-    @projects = Project.limit(5)
+    @projects = Project.where(:user_id => current_user)
   end
   
 end
