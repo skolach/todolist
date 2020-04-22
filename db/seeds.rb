@@ -24,7 +24,7 @@ def seed_projects
   users.each do |user|
     3.times do
       Project.create(
-      title: Faker::Lorem.sentences[0],
+      title: user.name + ' ' + Faker::Lorem.sentences[0],
       user_id: user.id
       )
     end
