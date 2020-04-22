@@ -5,7 +5,7 @@ class CreateTasks < ActiveRecord::Migration[5.2]
       t.integer :priority
       t.datetime :deadline
       t.boolean :done
-      t.belongs_to :projects, index: true
+      t.belongs_to :project, index: true
       t.timestamps
     end
   end

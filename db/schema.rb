@@ -25,10 +25,10 @@ ActiveRecord::Schema.define(version: 2020_04_21_112706) do
     t.integer "priority"
     t.datetime "deadline"
     t.boolean "done"
-    t.integer "projects_id"
+    t.integer "project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["projects_id"], name: "index_tasks_on_projects_id"
+    t.index ["project_id"], name: "index_tasks_on_project_id"
   end
 
   create_table "users", force: :cascade do |t|
