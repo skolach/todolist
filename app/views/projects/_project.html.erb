@@ -1,11 +1,10 @@
 <%= javascript_include_tag "project.js" %>
-<div id="container" id=<%= project_path(project.id) %>>
-  <h2><%= truncate(project.title, :length => 50) %> <i class="fa fa-plus"></i> </h2> <input type="text" placeholder="Add New Task">
-  <ul>
 
+<div class="project-container" id=<%= project_path(project.id) %>>
+  <h2><%= truncate(project.title, :length => 50) %> <i class="fa fa-plus"></i> </h2> <input type="text" placeholder="Add New Task">
+  <ul class='project-ul'>
     <% project.tasks.each do |task| %>
       <li><span><i class="fa fa-trash"></i></span> <%=task.title%> </li>      
     <% end %>
-
   </ul>
 </div>
