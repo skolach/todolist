@@ -8,4 +8,12 @@ module NavigationHelper
     end
   end
 
+  def add_project_button_path
+    if user_signed_in?
+      'layouts/navigation/add_project_button' 
+    else
+      'layouts/empty' 
+    end
+  end
+
 end
