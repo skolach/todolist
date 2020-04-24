@@ -22,9 +22,9 @@ end
 def seed_projects
   users = User.all
   users.each do |user|
-    3.times do
+    3.times do |n|
       Project.create(
-      title: user.name + ' ' + Faker::Lorem.sentences[0],
+      title: user.name + " Project #{n} " + Faker::Lorem.sentences[0],
       user_id: user.id
       )
     end
@@ -36,7 +36,7 @@ def seed_tasks
   projects.each do |project|
     5.times do
       Task.create(
-      title: Faker::Lorem.sentences[0],
+      title: project.title[0..15] + Faker::Lorem.sentences[0],
       priority: rand(0..10),
       deadline: Time.now,
       done: rand(0..10).odd?,
