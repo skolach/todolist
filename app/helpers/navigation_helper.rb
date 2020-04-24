@@ -8,9 +8,9 @@ module NavigationHelper
     end
   end
 
-  def add_project_button_path
+  def add_project_input_path
     if user_signed_in?
-      'layouts/navigation/add_project_button' 
+      'layouts/navigation/new_project_input' 
     else
       'layouts/empty' 
     end
