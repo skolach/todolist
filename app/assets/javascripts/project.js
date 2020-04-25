@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  $("ul.project-ul").on("click", "li", function(){
+  $("ul.project-ul").on("click", "i", function(){
     $(this).toggleClass("completed");
   });
 
