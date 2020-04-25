@@ -1,0 +1,11 @@
+<%if task.done%>
+  <li class="completed">
+    <span><i class="fa fa-trash"></i></span>
+      <i><%=task.title%></i>
+  </li>      
+<%else%>      
+  <li>
+    <span><i class="fa fa-trash"></i></span>
+      <i><%=task.title%></i>
+  </li>      
+<%end%>

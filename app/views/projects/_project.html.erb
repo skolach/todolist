@@ -8,19 +8,7 @@
   <input type="text" placeholder="Add New Task">
   <ul class='project-ul'>
     <% project.tasks.each do |task| %>
-
-      <%if task.done%>
-        <li class="completed">
-          <span><i class="fa fa-trash"></i></span>
-            <i><%=task.title%></i>
-        </li>      
-      <%else%>      
-        <li>
-          <span><i class="fa fa-trash"></i></span>
-            <i><%=task.title%></i>
-        </li>      
-      <%end%>      
-
+      <%= render partial: 'tasks/task', object: task %>
     <% end %>
   </ul>
 </div>
